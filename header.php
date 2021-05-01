@@ -10,6 +10,11 @@
    */
   
   ?>
+<?php
+   // Get Sub Menus
+   // WP saved our Sub Menu as 19 when it was created
+   $subMenuItems = wp_get_nav_menu_items( 19, array( 'order' => 'DESC' ) );
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -141,15 +146,11 @@
 
             <nav class="custom-submenu">
               <div class="container">
-                <ul class="">
-                  <li><a href="">Waryfish</a></li>
-                  <li><a href="">Rockweed </a></li>
-                  <li><a href="">Tiger Shark</a></li>
-                  <li><a href="">Whale Catfish</a></li>
-                  <li><a href="">Bass</a></li>
-                  <li><a href="">Salmon</a></li>
-                  <li><a href="">Marlin</a></li>
-                  <li><a href="">Yellow Fin</a></li>
+                <ul class="submenu">
+                  <?php foreach($subMenuItems as $menuItem): ?>
+                  <li><a href="<?php echo $menuItem->url; ?>"><?php echo $menuItem->title; ?></a></li>
+                  <?php endforeach; ?>
+
                 </ul>
               </div>
             </nav>
