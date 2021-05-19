@@ -9,7 +9,7 @@
          // child
          wp_enqueue_style('child-theme', get_stylesheet_directory_uri() .'/style.css', array('parent-theme'));
          $childCSS = get_stylesheet_directory_uri() . '/style.css';
-         error_log($childCSS);
+         //error_log($childCSS);
          
          // custom.js
          wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
