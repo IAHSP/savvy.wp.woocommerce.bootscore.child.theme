@@ -162,7 +162,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="my-offcancas-account">
-                        <?php include get_template_directory() . '/woocommerce/myaccount/my-account-offcanvas.php'; ?>
+                        <?php include get_stylesheet_directory() . '/woocommerce/myaccount/my-account-offcanvas.php'; ?>
                     </div>
                 </div>
             </div>

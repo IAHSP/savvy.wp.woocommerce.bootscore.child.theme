@@ -31,7 +31,7 @@
               <span class="h3">Sorry, but you do not have permission to view this content.</span><br />
               Please log in to see it.
               <div class="btn-holder mt-4">
-                <a class="btn btn-primary" href="/wp-login.php?redirect_to=<?php echo $selfURL; ?>">Log In</a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">Log In</button>
               </div>
             <?php endif; ?>
 
