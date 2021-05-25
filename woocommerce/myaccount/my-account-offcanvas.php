@@ -46,7 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p class="h5"><?php esc_html_e( 'Login with your IAHSP or SAVVY Pro account.', 'woocommerce' ); ?></p>
 
       <div class="card mt-3 mb-4">
+        <iframe src="/wp-login.php" height="450" seamless="seamless" scrolling="no" frameborder="0" style="overflow: hidden"></iframe>
 
+        <?php if (0==1): ?>
         <form class="card-body" method="post">
 
           <?php do_action( 'woocommerce_login_form_start' ); ?>
@@ -78,6 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <?php do_action( 'woocommerce_login_form_end' ); ?>
 
         </form>
+        <?php endif; ?>
 
       </div>
 
