@@ -46,7 +46,39 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p class="h5"><?php esc_html_e( 'Login with your IAHSP or SAVVY Pro account.', 'woocommerce' ); ?></p>
 
       <div class="card mt-3 mb-4">
-        <iframe src="/wp-login.php" height="450" seamless="seamless" scrolling="no" frameborder="0" style="overflow: hidden"></iframe>
+        <?php //echo do_shortcode('[mo_firebase_auth_display_login_form]'); ?>
+
+        <?php
+          $args = array(
+            'echo'           => true,
+            'remember'       => true,
+            'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+            'form_id'        => 'loginform',
+            'id_username'    => 'user_login',
+            'id_password'    => 'user_pass',
+            'id_remember'    => 'rememberme',
+            'id_submit'      => 'wp-submit',
+            'label_username' => __( 'Email Address' ),
+            'label_password' => __( 'Password' ),
+            'label_remember' => __( 'Remember Me' ),
+            'label_log_in'   => __( 'Log In' ),
+            'value_username' => '',
+            'value_remember' => false
+          );
+        ?>
+
+        <div class="card-body">
+        <?php wp_login_form($args); ?>
+        </div>
+        <script>
+          //Need to add the bootstrap classes manually, after WP has created the login form.
+          document.getElementById('user_login').classList.add('form-control');
+          document.getElementById('user_pass').classList.add('form-control');
+          document.getElementById('rememberme').classList.add('form-check-input');
+          document.getElementById('wp-submit').classList.add('btn', 'btn-primary');
+        </script>
+        <style>#wp-submit{color: #fff}</style>
+
 
         <?php if (0==1): ?>
         <form class="card-body" method="post">
