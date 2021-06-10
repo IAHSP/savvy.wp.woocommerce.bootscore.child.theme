@@ -122,7 +122,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div id="iahsp-reg">
       <p class="h5">Not an IAHSP member yet?</p>
-      <p>That's not a problem!  Go <a href="https://iahsp.com/register">Here To Register</a> for an account now!</p>
+      <p>That's not a problem!  Go <a href="https://iahsp.com/register/">Here To Register</a> for an account now!</p>
+    </div>
+
+    <div id="savvy-reg">
+      <p class="h5">Want to become a SAVVY Pro Member only?</p>
+      <p>You can sign up to be a SAVVY Pro member!  Go <a href="https://iahsp.com/register/reg-savvy">Here To Register</a> for an account now!</p>
     </div>
 
     
