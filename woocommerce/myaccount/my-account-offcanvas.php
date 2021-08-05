@@ -68,7 +68,10 @@ if ( ! defined( 'ABSPATH' ) ) {
         ?>
 
         <div class="card-body">
-        <?php wp_login_form($args); ?>
+          <?php wp_login_form($args); ?>
+          <div class="lost-password">
+            <small><a href="/my-account/lost-password/">Lost your password?</a></small>
+          </div>
         </div>
         <script>
           //Need to add the bootstrap classes manually, after WP has created the login form.
