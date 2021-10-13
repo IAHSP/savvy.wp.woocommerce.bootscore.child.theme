@@ -9,6 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
+<style>
+  .modal-backdrop {
+    z-index: 0;
+  }
+  i.fa-info-circle {
+    color: #f1c95c;
+  }
+</style>
 
 <?php if ( is_user_logged_in() ) { ?>
 
@@ -124,8 +132,24 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <div id="iahsp-reg">
-      <p class="h5">Not an IAHSP member yet?</p>
+      <p class="h5">Not an IAHSP member yet? <span><i type="button" class="fa fa-info-circle" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-hidden="true"></i></span></p>
       <p>That's not a problem!  Go <a href="https://iahsp.com/register/">Here To Register</a> for an account now!</p>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="savvy-reg">
