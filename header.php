@@ -126,10 +126,15 @@
             </div>
           </div>
 
-
-          <button class="user-toggler right btn btn-outline-secondary ms-2 order-lg-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
-            <i class="fas fa-user"></i>
-          </button>
+          <?php if (is_user_logged_in()): ?>
+            <a class="user-toggler right btn btn-outline-secondary ms-2 order-lg-3" type="button" href="/my-account">
+              <i class="fas fa-user"></i> Dashboard
+            </a>
+          <?php else: ?>
+            <button class="user-toggler right btn btn-outline-secondary ms-2 order-lg-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+              <i class="fas fa-user"></i> Login
+            </button>
+          <?php endif; ?>
 
           <button class="cart-toggler right btn btn-outline-secondary ms-2 order-lg-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
             <i class="fas fa-shopping-bag"></i>
